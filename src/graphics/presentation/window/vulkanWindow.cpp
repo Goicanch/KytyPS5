@@ -963,7 +963,7 @@ void WindowContext::CreateVulkan() {
 	                         rejected_devices);
 
 	if (graphic_ctx.physical_device == nullptr) {
-		//EXIT("Could not find suitable device:%s", rejected_devices.c_str());
+		device_features.fragmentShaderBarycentric = true;
 	}
 
 	vk::PhysicalDevicePushDescriptorProperties push_descriptor_properties {};
